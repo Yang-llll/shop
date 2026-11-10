@@ -1,0 +1,34 @@
+# IDE and operating system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Java / Maven
+backend/target/
+backend/uploads/
+*.log
+
+# Node / Vite
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+application-local.yml
+**/application-local.yml
+
+# Personal payment assets
+**/wechat-payment-qr.*
+**/*personal*qr.*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak

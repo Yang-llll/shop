@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>API Test</title></head>
+<body>
+<pre id="output">Loading...</pre>
+<script>
+fetch('/api/products?page=0&size=12')
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById('output').textContent = 
+      'Raw response:\n' + JSON.stringify(data, null, 2) + 
+      '\n\ndata.products: ' + JSON.stringify(data.data?.products?.map(p => p.name)) +
+      '\ndata.totalElements: ' + data.data?.totalElements;
+  })
+  .catch(e => document.getElementById('output').textContent = e);
+</script>
+</body>
+</html>
